@@ -7,7 +7,6 @@ const gridContainer = document.querySelector('.grid-container');
 const inputGrid = document.querySelector('.input-grid')
 const button = document.querySelector('.btn-grid');
 
-const containerWidth = DEFAULT_CONTAINER_SIZE;
 inputGrid.value = DEFAULT_GRID_SIZE;
 
 function createRandomRGB() {
@@ -22,9 +21,9 @@ function decreaseOpacity(element) {
 
 function createGrid(itemsRow) {
     const fragment = document.createDocumentFragment();
-    const itemSize = `${containerWidth / itemsRow}px`;
+    const itemSize = `${DEFAULT_CONTAINER_SIZE / itemsRow}px`;
 
-    gridContainer.style.width = `${containerWidth}px`;
+    gridContainer.style.width = `${DEFAULT_CONTAINER_SIZE}px`;
 
     for (let i = 1; i <= itemsRow * itemsRow; i++) {
         const gridItem = document.createElement('div');
